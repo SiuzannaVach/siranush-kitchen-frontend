@@ -26,3 +26,7 @@ dist-ssr
 # VS Code settings
 .vscode/
 *.code-workspace
+
+# Environment Variables
+.env
+.env.local
