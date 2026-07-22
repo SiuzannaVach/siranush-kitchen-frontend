@@ -1,0 +1,45 @@
+/* ==========================================================================
+   CSS RESET - Standardizes cross-browser default styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Чтобы внутренние отступы не взрывали ширину блоков */
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%; /* Защищает картинки от вылезания за пределы блоков */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Чтобы кнопки и инпуты не сбрасывали шрифты сайта */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Убирает стандартный синий цвет и подчеркивание у ссылок */
+}
+
+ul,
+ol {
+  list-style: none; /* Полностью убирает стандартные точки у списков */
+}
