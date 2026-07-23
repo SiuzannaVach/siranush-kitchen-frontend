@@ -1,0 +1,86 @@
+@use "variables" as *;
+
+// --- МОБИЛЬНАЯ ВЕРСИЯ (Стили по умолчанию) ---
+.site-footer {
+  background-color: $color-footer-bg !important;
+  padding: 48px 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: $color-white !important;
+    border-radius: 4px !important;
+    padding: 0;
+    display: inline-block;
+    filter: grayscale(100%) brightness(0.9);
+  }
+
+  .footer-logo {
+    font-family: $font-title;
+    font-size: 2rem;
+    font-weight: $weight-bold;
+    color: $color-footer-text !important;
+    margin: 0;
+  }
+
+  // Стили для линии-разделителя из Figma
+  .footer-divider {
+    width: 100%;
+    max-width: 600px; /* Ограничение длины линии */
+    border: none;
+    border-top: 1px solid rgba($color-footer-text, 0.2); /* Тонкая персиковая линия */
+    margin: 24px 0; /* Отступы сверху и снизу линии */
+  }
+
+  .footer-copy {
+    font-family: $font-title;
+    font-size: 1rem;
+    font-style: italic;
+    color: $color-footer-text !important;
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  // --- ДЕСКТОПНАЯ ВЕРСИЯ ---
+  @media (min-width: $breakpoint-tablet) {
+    padding: 48px 80px;
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 2.2rem;
+    }
+
+    .footer-divider {
+      margin: 32px 0; /* Чуть больше отступ на десктопе */
+    }
+
+    .footer-copy {
+      font-size: 1.1rem;
+    }
+  }
+}
