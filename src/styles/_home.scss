@@ -1,0 +1,737 @@
+@use "variables" as *;
+
+.home-page-mobile {
+  display: block !important;
+}
+.home-page,
+.roots-section {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .home-page-mobile {
+    display: none !important;
+  }
+  .home-page {
+    display: block !important;
+  }
+  .roots-section {
+    display: block !important;
+  }
+}
+
+.hero-container-mobile,
+.recipes-container-mobile,
+.roots-container-mobile,
+.subscribe-container-mobile {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// --- СЕКЦИЯ 1: HERO ---
+.hero-image-box-mobile {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+
+  .hero-img-mobile {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+}
+
+.hero-content-mobile {
+  text-align: left !important;
+}
+
+.hero-text-mobile {
+  font-family: $font-title !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  line-height: 24px !important;
+  font-weight: 600 !important;
+  color: $color-dark !important;
+  text-align: left !important;
+  padding: 0 20px !important;
+  margin: 24px auto 40px auto !important;
+  max-width: 100% !important;
+}
+
+// --- СЕКЦИЯ 2: RECETAS TRADICIONALES ---
+.recipes-section-mobile {
+  background-color: #fdfaf6 !important;
+  padding: 40px 16px !important;
+}
+
+.recipes-grid-mobile {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 32px !important;
+}
+
+.recipe-card-mobile {
+  background-color: #ffffff !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  border: none !important;
+}
+
+.card-image-box-mobile {
+  width: 100% !important;
+  height: 220px !important;
+  overflow: hidden !important;
+
+  img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
+
+.card-content-mobile {
+  padding: 24px 20px !important;
+  text-align: left !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+.card-title-mobile {
+  font-family: $font-title;
+  font-size: 24px !important;
+  color: #333333 !important;
+  margin-bottom: 12px !important;
+  font-weight: bold;
+}
+
+.card-text-mobile {
+  font-family: $font-title !important;
+  font-style: italic !important;
+  font-size: 16px !important;
+  font-weight: 600 !important; // Повышенная жирность текста рецептов
+  line-height: 24px !important;
+  text-align: left !important; // Выравнивание по левому краю строго по Figma
+  color: $color-dark !important; // Контрастный цвет вместо блеклого
+  margin-top: 12px !important;
+  margin-bottom: 20px !important;
+}
+
+.card-link-mobile {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 14px 24px !important;
+  border-radius: 6px !important;
+  font-family: $font-body;
+  font-weight: $weight-medium;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  box-sizing: border-box !important;
+  transition: opacity 0.2s ease !important;
+
+  &:hover {
+    opacity: 0.9 !important;
+  }
+}
+
+.btn-dolma-mobile {
+  background-color: #6b0000 !important;
+}
+.btn-gata-mobile {
+  background-color: #9e4f00 !important;
+}
+.btn-xash-mobile {
+  background-color: #721c1c !important;
+}
+.btn-ghapama-mobile {
+  background-color: $color-accent !important;
+}
+
+// --- СЕКЦИЯ 3: LAS RAÍCES ---
+.roots-section-mobile {
+  background-color: $color-secondary;
+  padding: 40px 0;
+}
+
+.roots-image-box-mobile {
+  background-color: $color-white;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba($color-accent, 0.3);
+  box-shadow: 0 0 15px rgba($color-accent, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    height: auto;
+  }
+}
+
+.roots-content-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title-mobile {
+  font-family: $font-title;
+  font-size: 28px;
+  color: $color-primary;
+  margin-bottom: 16px;
+}
+
+.roots-text-mobile {
+  font-family: $font-body;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $color-dark;
+  margin-bottom: 24px;
+}
+
+.recipe-btn-mobile {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $font-body;
+  font-weight: $weight-medium;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+// --- СЕКЦИЯ 4: REGISTRARSE ---
+.subscribe-section-mobile {
+  background-color: #fdf6ee !important;
+  padding: 48px 0 !important;
+  width: 100% !important;
+  margin-bottom: 40px !important;
+}
+
+.subscribe-box-mobile {
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.subscribe-title-mobile {
+  font-family: $font-title;
+  font-size: 32px;
+  color: #5a0000;
+  margin-bottom: 4px;
+  font-weight: $weight-bold;
+}
+
+.subscribe-form-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.subscribe-input-mobile {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #6d5c4b;
+  border-radius: 0;
+  background-color: transparent;
+  color: $color-dark;
+  font-family: $font-body;
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: rgba(#6d5c4b, 0.6);
+  }
+
+  &:focus {
+    border-bottom-color: #5a0000;
+    outline: none;
+  }
+}
+
+.subscribe-btn-mobile {
+  width: 100%;
+  background-color: #5a0000;
+  color: $color-white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px;
+  font-family: $font-body;
+  font-weight: $weight-medium;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(90, 0, 0, 0.15);
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// ==========================================
+// 2. VERSION DESKTOP
+// ==========================================
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: auto;
+  padding: 60px 20px;
+}
+
+.hero-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-subtitle {
+  display: block;
+  font-family: $font-body;
+  font-size: 14px;
+  font-weight: $weight-bold;
+  letter-spacing: 1.5px;
+  color: $color-accent;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-family: $font-title;
+  font-size: 32px;
+  line-height: 1.2;
+  color: $color-primary;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-dark;
+  margin-bottom: 25px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// Кнопки
+.btn-primary {
+  display: inline-block;
+  text-align: center;
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $font-body;
+  font-weight: $weight-medium;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  text-align: center;
+  background-color: transparent;
+  color: $color-primary;
+  font-family: $font-body;
+  font-weight: $weight-medium;
+  padding: 14px 28px;
+  border: 1px solid $color-primary;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba($color-primary, 0.05);
+  }
+}
+
+// --- Recetas Tradicionales ---
+.recipes-section {
+  background-color: $color-secondary;
+  padding: 40px 20px;
+}
+
+.recipes-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title-center {
+  text-align: center;
+  font-family: $font-title;
+  font-size: 28px;
+  color: $color-primary;
+  margin-bottom: 12px;
+}
+
+.section-subtitle-center {
+  text-align: center;
+  font-family: $font-body;
+  font-size: 15px;
+  color: $color-nav-text;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.recipes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-card {
+  background-color: #f7ede2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba($color-primary, 0.04);
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-title {
+  font-family: $font-title;
+  font-size: 22px;
+  color: $color-primary;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-family: $font-body;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $color-dark;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-family: $font-body;
+  font-weight: $weight-bold;
+  color: $color-primary;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.roots-image-box {
+  background-color: $color-white;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba($color-accent, 0.3);
+  box-shadow:
+    0 0 15px rgba($color-accent, 0.2),
+    0 0 30px rgba($color-accent, 0.1);
+  display: block;
+  width: 100%;
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+  }
+}
+
+.roots-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  font-family: $font-title;
+  font-size: 28px;
+  color: $color-primary;
+  margin-bottom: 16px;
+}
+
+.roots-text {
+  font-family: $font-body;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $color-dark;
+  margin-bottom: 24px;
+}
+
+.recipe-btn-link {
+  text-decoration: none;
+}
+
+.recipe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $font-body;
+  font-weight: $weight-medium;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recipe-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+// --- Registrarse ---
+.subscribe-section {
+  background-color: $color-secondary;
+  padding: 40px 20px;
+}
+
+.subscribe-box {
+  background-color: $color-primary;
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-title {
+  font-family: $font-title;
+  font-size: 28px;
+  color: $color-white;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.subscribe-input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba($color-white, 0.2);
+  background-color: rgba($color-white, 0.1);
+  color: $color-white;
+  font-family: $font-body;
+  font-size: 16px;
+
+  &::placeholder {
+    color: rgba($color-white, 0.4);
+  }
+}
+
+.subscribe-btn {
+  width: 100%;
+  background-color: $color-accent;
+  color: $color-white;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-family: $font-body;
+  font-weight: $weight-bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+// ==========================================
+// 2. DESKTOP VERSION
+// ==========================================
+
+@media (min-width: $breakpoint-desktop) {
+  .hero-section {
+    min-height: 80vh;
+    padding: 80px 40px;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    text-align: left;
+  }
+
+  .recipes-section {
+    padding: 80px 40px;
+  }
+
+  .recipes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title-center {
+    font-size: 36px;
+  }
+
+  .section-subtitle-center {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .card-image-box img {
+    height: 300px;
+  }
+
+  .card-content {
+    padding: 30px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+
+  .roots-section {
+    padding: 80px 40px;
+  }
+
+  .roots-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .roots-image-box {
+    padding: 16px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow:
+        0 0 25px rgba($color-accent, 0.4),
+        0 0 50px rgba($color-accent, 0.2);
+      border-color: $color-accent;
+    }
+  }
+
+  .roots-content {
+    align-items: flex-start;
+    text-align: left;
+    border-left: 2px solid $color-primary;
+    padding-left: 40px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .roots-text {
+    font-size: 16px;
+  }
+
+  .subscribe-box {
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .subscribe-title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+    gap: 16px;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .subscribe-input {
+    flex-grow: 1;
+  }
+
+  .subscribe-btn {
+    width: auto;
+  }
+  .subscribe-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
