@@ -1,0 +1,276 @@
+@use "variables" as *;
+
+// Базовые стили для мобильной версии
+.auth-overlay {
+  position: relative;
+  width: auto;
+  margin: -40px -20px 0 -20px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 4rem 1rem 3rem 1rem;
+  box-sizing: border-box;
+}
+
+.auth-overlay ~ .site-footer {
+  margin-top: 0 !important;
+}
+
+.auth-mobile-bg {
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.auth-modal {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 380px;
+  background: rgba($color-white, 0.45);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba($color-white, 0.4);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 32px rgba($color-dark, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal__left {
+  display: none;
+}
+
+.auth-modal__right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal__close {
+  display: none;
+}
+
+.auth-modal__title {
+  display: none;
+  font-family: $font-title;
+  font-size: 1.7rem;
+  color: $color-primary;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: $weight-bold;
+}
+
+.auth-modal__subtitle {
+  display: none;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  color: $color-nav-text;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.auth-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-family: $font-body;
+      font-size: 0.9rem;
+      color: $color-dark;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: $weight-medium;
+    }
+
+    input {
+      font-family: $font-body;
+      width: 100%;
+      padding: 0.75rem 0;
+      border: none;
+      border-bottom: 1px solid rgba($color-dark, 0.2);
+      font-size: 1rem;
+      color: $color-dark;
+      outline: none;
+      background: transparent;
+
+      &:focus {
+        border-bottom-color: $color-primary;
+      }
+    }
+  }
+
+  .password-wrapper {
+    position: relative;
+    width: 100%;
+
+    input {
+      padding-right: 2.5rem;
+    }
+
+    .password-toggle-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0.75rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      user-select: none;
+      color: $color-nav-text;
+    }
+  }
+
+  .login-btn {
+    font-family: $font-body;
+    margin-top: 1rem;
+    padding: 0.9rem;
+    background: $color-primary;
+    color: $color-white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: $weight-bold;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+  }
+}
+
+.auth-modal__footer {
+  margin-top: 2rem;
+  text-align: center;
+
+  p {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    color: $color-nav-text;
+    margin-bottom: 0.75rem;
+  }
+
+  .register-link-btn {
+    font-family: $font-body;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    padding: 0.6rem 2.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: $weight-medium;
+  }
+}
+
+// ==========================================================================
+// Десктопная версия (Поп-ап окно ровно по центру поверх всего)
+// ==========================================================================
+@media (min-width: $breakpoint-desktop) {
+  .auth-mobile-bg {
+    display: none;
+  }
+
+  .auth-modal__title,
+  .auth-modal__subtitle {
+    display: block;
+  }
+
+  .auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); // Затемнение стало темнее и глубже
+    backdrop-filter: blur(5px); // Мягкое размытие заднего плана
+    display: flex;
+    justify-content: center;
+    align-items: center; // Идеальное центрирование по вертикали
+    padding: 0;
+    margin: 0;
+    min-height: auto;
+    z-index: 2000;
+  }
+
+  .auth-modal {
+    flex-direction: row;
+    width: 90%;
+    max-width: 1000px;
+    height: 680px;
+    background: rgba(#f5efe6, 0.85);
+    backdrop-filter: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .auth-modal__left {
+    display: block;
+    width: 50%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 85%;
+    }
+  }
+
+  .auth-modal__right {
+    width: 50%;
+    height: 100%;
+    padding: 6rem 4rem;
+    justify-content: center;
+  }
+
+  .auth-modal__close {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: $color-primary;
+    cursor: pointer;
+  }
+
+  .auth-modal__title {
+    text-align: left;
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  .auth-modal__subtitle {
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .auth-modal__footer {
+    margin-top: 2rem;
+    text-align: center;
+
+    .register-link-btn {
+      width: auto;
+    }
+  }
+}

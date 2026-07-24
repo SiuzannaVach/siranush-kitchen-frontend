@@ -3,7 +3,7 @@
 // --- МОБИЛЬНАЯ ВЕРСИЯ (Стили по умолчанию) ---
 .site-footer {
   background-color: $color-footer-bg !important;
-  padding: 48px 20px;
+  padding: 24px 20px; // Уменьшили вертикальные отступы с 48px до 24px
   width: 100%;
   text-align: center;
   margin-top: auto;
@@ -21,12 +21,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 12px; // Немного прижали логотип к названию
   }
 
   .footer-logo-img {
-    width: 80px;
-    height: 80px;
+    width: 60px; // Сделали иконку чуть аккуратнее для мобилки
+    height: 60px;
     object-fit: contain;
     background-color: $color-white !important;
     border-radius: 4px !important;
@@ -37,7 +37,7 @@
 
   .footer-logo {
     font-family: $font-title;
-    font-size: 2rem;
+    font-size: 1.6rem; // Уменьшили размер шрифта названия для мобильных
     font-weight: $weight-bold;
     color: $color-footer-text !important;
     margin: 0;
@@ -46,29 +46,34 @@
   // Стили для линии-разделителя из Figma
   .footer-divider {
     width: 100%;
-    max-width: 600px; /* Ограничение длины линии */
+    max-width: 600px;
     border: none;
-    border-top: 1px solid rgba($color-footer-text, 0.2); /* Тонкая персиковая линия */
-    margin: 24px 0; /* Отступы сверху и снизу линии */
+    border-top: 1px solid rgba($color-footer-text, 0.2);
+    margin: 16px 0; // Уменьшили отступы линии с 24px до 16px
   }
 
   .footer-copy {
     font-family: $font-title;
-    font-size: 1rem;
+    font-size: 0.85rem; // Сделали копирайт более компактным
     font-style: italic;
     color: $color-footer-text !important;
-    line-height: 1.5;
+    line-height: 1.4;
     max-width: 100%;
     margin: 0;
   }
 
   // --- ДЕСКТОПНАЯ ВЕРСИЯ ---
   @media (min-width: $breakpoint-tablet) {
-    padding: 48px 80px;
+    padding: 48px 80px; // На больших экранах возвращаем стандартные отступы
 
     .footer-container {
       flex-direction: column;
       align-items: center;
+    }
+
+    .footer-logo-img {
+      width: 80px;
+      height: 80px;
     }
 
     .footer-logo {
@@ -76,7 +81,7 @@
     }
 
     .footer-divider {
-      margin: 32px 0; /* Чуть больше отступ на десктопе */
+      margin: 32px 0;
     }
 
     .footer-copy {
