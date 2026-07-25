@@ -3,18 +3,18 @@
    ========================================================================== */
 
 // --- Color Palette (Exact Figma Match) ---
-$color-primary: #700009; // Глубокий бордовый (логотип и активное меню)
-$color-secondary: #fdfbf7; // Светло-кремовый фон всего сайта
-$color-accent: #9b401b; // Терракотовый акцент (ингредиенты, подписи)
-$color-dark: #1c1c17; // Темно-коричневый (заголовки и названия блюд)
-$color-nav-text: #58413f; // Кофейный цвет для обычных ссылок меню
-$color-footer-bg: #78382d; // Терракотово-коричневый фон футера
-$color-footer-text: #fca595; // Нежно-персиковый цвет логотипа в футере
-$color-white: #ffffff; // Чистый белый для карточек и блоков
+$color-primary: #700009;
+$color-secondary: #fdfbf7;
+$color-accent: #9b401b;
+$color-dark: #1c1c17;
+$color-nav-text: #58413f;
+$color-footer-bg: #78382d;
+$color-footer-text: #fca595;
+$color-white: #ffffff;
 
 // --- Typography ---
-$font-title: "Literata", serif; // Для логотипов и заголовков
-$font-body: "Work Sans", sans-serif; // Для основного текста и меню
+$font-title: "Literata", serif;
+$font-body: "Work Sans", sans-serif;
 
 // --- Font Weights ---
 $weight-regular: 400;
