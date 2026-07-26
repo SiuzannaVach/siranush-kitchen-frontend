@@ -48,7 +48,7 @@ export default function AuthModal({
             <div className="form-group">
               <label>Correo Electrónico</label>
               <input
-                type="email"
+                type="texto"
                 name="username"
                 placeholder="Barev@Armenia.com"
                 value={credentials?.username || ""}
