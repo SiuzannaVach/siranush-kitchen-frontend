@@ -5,6 +5,11 @@ import iconSopas from '../assets/icon-sopas.svg';
 import iconCarnes from '../assets/icon-carnes.svg';
 import iconReposteria from '../assets/icon-reposteria.svg';
 import iconFestividades from '../assets/icon-festividades.svg';
+import AddRecipeModal from '../components/AddRecipeModal/AddRecipeModal';
+import pomegranateBg from "../assets/pomegranate-pattern.jpg";
+
+
+
 
 
 import dishXash from '../assets/recipe-xash.jpg';
@@ -16,9 +21,11 @@ import iconEdit from '../assets/icon-edit.svg';
 import iconDelete from '../assets/icon-delete.svg';
 
 export default function Dashboard() {
- 
+ const [isModalOpen, setIsModalOpen] = useState(false);
+const [editingRecipe, setEditingRecipe] = useState(null);
   const [activeCategory, setActiveCategory] = useState('all');
 
+  
   const categories = [
     { id: 'all', name: 'Todos los Platos', icon: iconAll, isAll: true },
     { id: 'sopas', name: 'Sopas', icon: iconSopas },
@@ -27,9 +34,7 @@ export default function Dashboard() {
     { id: 'festividades', name: 'Festividades', icon: iconFestividades }
   ];
 
-
-
- const [recipes, setRecipes] = useState([
+  const [recipes, setRecipes] = useState([
     {
       id: 1,
       title: 'Dolma de Hoja de Parra de Verano',
@@ -72,8 +77,9 @@ export default function Dashboard() {
     alert(`Visualizando la receta de: ${title}`);
   };
 
-  const handleEditRecipe = (title) => {
-    alert(`Editando la receta de: ${title}`);
+  const handleEditRecipe = (recipe) => {
+    setEditingRecipe(recipe); 
+    setIsModalOpen(true); 
   };
 
   const handleDeleteRecipe = (id, title) => {
@@ -82,6 +88,17 @@ export default function Dashboard() {
       setRecipes(recipes.filter(recipe => recipe.id !== id));
     }
   };
+    const handleSaveRecipe = (savedRecipe) => {
+    if (editingRecipe) {
+     
+      setRecipes(recipes.map(r => r.id === editingRecipe.id ? { ...r, ...savedRecipe, id: editingRecipe.id } : r));
+      setEditingRecipe(null);
+    } else {
+      
+      setRecipes([savedRecipe, ...recipes]);
+    }
+  };
+
 
   const filteredRecipes = activeCategory === 'all' 
     ? recipes 
@@ -92,7 +109,10 @@ export default function Dashboard() {
  
   <section className="hero-banner"></section>
  <div className="action-bar">
-        <button className="btn-add-recipe">Añadir nueva receta</button>
+
+    <button className="btn-add-recipe" onClick={() => setIsModalOpen(true)}>Añadir nueva receta</button>
+    
+
       </div> 
 
       
@@ -167,6 +187,19 @@ export default function Dashboard() {
             </div>
           )}
         </section>
+
+         <AddRecipeModal 
+          isOpen={isModalOpen} 
+          onClose={() => {
+            setIsModalOpen(false);
+            setEditingRecipe(null); 
+          }} 
+          onSave={handleSaveRecipe}
+          categories={categories}
+          recipeToEdit={editingRecipe} 
+        />
+
+
       </div>
     </main>
   );
