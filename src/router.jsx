@@ -5,6 +5,7 @@ import Recipes from "./pages/Recipes.jsx";
 import Login from "./pages/Login.jsx";
 import Admin from "./pages/Admin.jsx";
 import Register from "./pages/Register.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { path: "login", element: <Login /> },
       { path: "admin", element: <Admin /> },
       { path: "register", element: <Register /> },
+      { path: "dashboard", element: <Dashboard /> }
     ],
   },
 ]);
