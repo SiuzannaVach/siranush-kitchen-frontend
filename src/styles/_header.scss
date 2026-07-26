@@ -3,7 +3,10 @@
 // ==========================================
 // MOBILE STYLES (По умолчанию)
 // ==========================================
+
+
 .main-header {
+    border-bottom: 2px solid #6B231A !important;
   background-color: $color-secondary;
   padding: 1rem;
   border-bottom: 1px solid rgba($color-dark, 0.05);
@@ -32,7 +35,7 @@
     }
   }
 
-  // Кнопка Гамбургер из Figma
+ 
   .burger-menu {
     display: flex;
     flex-direction: column;
@@ -64,7 +67,7 @@
     }
   }
 
-  // Выпадающий блок меню на мобилке (скрыт по умолчанию)
+
   .header-actions {
     display: none;
     position: absolute;
@@ -133,7 +136,7 @@
 }
 
 // ==========================================
-// DESKTOP STYLES (Точное соответствие макету Figma)
+// DESKTOP 
 // ==========================================
 @media (min-width: $breakpoint-tablet) {
   .main-header {
@@ -141,7 +144,7 @@
 
     .header-container {
       width: 100%;
-      max-width: 1280px; /* Идеальное совпадение с сеткой .main-content */
+      max-width: 1280px; 
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -158,18 +161,18 @@
     }
 
     .burger-menu {
-      display: none !important; /* Принудительно отключаем бургер */
+      display: none !important; 
     }
 
     .header-actions {
-      display: flex !important; /* Показываем панель в строку */
+      display: flex !important; 
       position: static;
       flex-direction: row;
       align-items: center;
       padding: 0;
       box-shadow: none;
       background: none;
-      flex: 1; /* Занимает всё доступное пространство справа от логотипа */
+      flex: 1; 
     }
 
     .header-search {
