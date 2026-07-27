@@ -1,0 +1,37 @@
+/* ==========================================================================
+   GLOBAL STYLES - General application structure and typography
+   ========================================================================== */
+@use "variables" as *;
+
+body {
+  font-family: $font-body; // Основной шрифт для всего сайта (Work Sans)
+  background-color: $color-secondary; // Светло-кремовый фон из Figma
+  color: $color-dark; // Темно-коричневый цвет для обычного текста
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Глобальные настройки для всех заголовков сайта
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title; // Элегантный шрифт Literata из Figma
+  color: $color-dark; // Точный темный цвет заголовков #1C1C17
+  font-weight: $weight-bold;
+}
+
+// Главный контейнер-обертка приложения (держит футер снизу)
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Основной блок контента между Хедером и Футером
+.main-content {
+  flex: 1;
+  width: 100%;
+}

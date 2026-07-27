@@ -1,0 +1,27 @@
+/* ==========================================================================
+   DESIGN SYSTEM VARIABLES - Centralized theme colors and breakpoints
+   ========================================================================== */
+
+// --- Color Palette (Exact Figma Match) ---
+$color-primary: #700009;
+$color-secondary: #fdfbf7;
+$color-accent: #9b401b;
+$color-dark: #1c1c17;
+$color-nav-text: #58413f;
+$color-footer-bg: #78382d;
+$color-footer-text: #fca595;
+$color-white: #ffffff;
+
+// --- Typography ---
+$font-title: "Literata", serif;
+$font-body: "Work Sans", sans-serif;
+
+// --- Font Weights ---
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+
+// --- Responsive Breakpoints ---
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

@@ -1,0 +1,95 @@
+@use "variables" as *;
+
+// --- mobile  ---
+.site-footer {
+  background-color: $color-footer-bg !important;
+   padding: 12px 20px !important; 
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-logo-img {
+     width: 40px !important; 
+    height: 40px !important;
+    object-fit: contain;
+    background-color: $color-white !important;
+    border-radius: 4px !important;
+    padding: 0;
+    display: inline-block;
+    filter: grayscale(100%) brightness(0.9);
+  }
+
+  .footer-logo {
+    font-family: $font-title;
+     font-size: 1.2rem !important;
+    font-weight: $weight-bold;
+    color: $color-footer-text !important;
+    margin: 0;
+  }
+
+
+  .footer-divider {
+    width: 100%;
+    max-width: 240px;
+    border: none;
+    border-top: 1px solid rgba($color-footer-text, 0.15);
+    margin: 6px 0 !important;
+  }
+
+  .footer-copy {
+    font-family: $font-title;
+    font-size: 0.75rem !important; 
+    font-style: italic;
+    color: $color-footer-text !important;
+    line-height: 1.3;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  // --- desktop ---
+  @media (min-width: $breakpoint-tablet) {
+      padding: 12px 40px !important;
+
+    .footer-container {
+    
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    
+    .footer-logo-img {
+      width: 40px !important; 
+      height: 40px !important;
+    }
+
+    .footer-logo {
+      font-size: 1.3rem !important;
+    }
+
+    .footer-divider {
+    display: none !important; 
+    }
+
+    .footer-copy {
+        font-size: 0.9rem !important; 
+      text-align: right;
+    }
+  }
+}
