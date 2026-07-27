@@ -214,7 +214,7 @@ function HomeDesktop() {
                     "La abuela se despertaba antes del amanecer, la cocina ya
                     estava caliente..."
                   </p>
-                  <Link to="/recipes" className="card-link">
+                  <Link to="/xash" className="card-link">
                     Ver Receta &rarr;
                   </Link>
                 </div>
@@ -229,7 +229,7 @@ function HomeDesktop() {
                     "Un trabajo de amor que me enseñó paciencia: cada hoja,un
                     secreto guardado."
                   </p>
-                  <Link to="/recipes" className="card-link">
+                  <Link to="/dolma" className="card-link">
                     Ver Receta &rarr;
                   </Link>
                 </div>
@@ -244,7 +244,7 @@ function HomeDesktop() {
                     "El aroma de vainilla y mantequilla que daba la bienvenida a
                     cada invitado en casa."
                   </p>
-                  <Link to="/recipes" className="card-link">
+                  <Link to="/gata" className="card-link">
                     Ver Receta &rarr;
                   </Link>
                 </div>
@@ -259,7 +259,7 @@ function HomeDesktop() {
                     "¡Hey Jan Ghapama! La canción que cantábamos mientras la
                     cocina se llenaba del aroma a miel y frutas secos."
                   </p>
-                  <Link to="/recipes" className="card-link">
+                  <Link to="/ghapama" className="card-link">
                     Ver Receta &rarr;
                   </Link>
                 </div>
