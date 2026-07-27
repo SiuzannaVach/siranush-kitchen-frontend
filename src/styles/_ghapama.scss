@@ -1,0 +1,247 @@
+@use "variables" as *;
+
+/* ==========================================================================
+   1.MOBILE
+   ========================================================================== */
+.ghapama-page-wrapper {
+   
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.ghapama-container {
+  width: 100%;
+  padding: 24px 16px; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+}
+
+
+.ghapama-hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .ghapama-main-title {
+    font-family: $font-title;
+    color: $color-accent;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: $weight-bold;
+  }
+  .ghapama-main-description {
+    font-family: $font-body;
+    font-size: 14px;
+    color: $color-dark;
+    line-height: 1.5;
+  }
+  .ghapama-meta-info {
+    display: flex;
+    gap: 16px;
+    font-family: $font-body;
+    font-size: 14px;
+    color: $color-nav-text;
+  }
+  .ghapama-big-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+
+
+.ghapama-ingredients-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ghapama-song-box {
+  background-color: #9c7a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  h3 { font-family: $font-title; margin-bottom: 8px; }
+  .song-quote { font-style: italic; font-size: 14px; margin-bottom: 8px; }
+  .song-desc { font-size: 13px; opacity: 0.9; margin-bottom: 16px; }
+  
+}
+
+.ghapama-ingredients-box {
+  background:  #FCF9F5;
+  border: 1px solid #E2D1C3;
+  padding: 24px 20px;
+  border-radius: 20px;
+  
+
+   h2 {
+    font-family: $font-title, serif; 
+    color: #A8441F;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+.step-inner-img {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; 
+    display: block;
+  }
+}
+
+
+  .ghapama-list li {
+    padding: 12px 0 12px 20px;
+    font-family: $font-body;
+    font-size: 14px;
+     position: relative;
+      display: flex;
+        align-items: center;
+    border-bottom: 1px solid rgba($color-dark, 0.1);
+    &:last-child { border-bottom: none; }
+    
+    
+  }
+}
+
+
+.ghapama-steps-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h2 { font-family: $font-title; color: $color-accent; font-size: 26px; }
+
+  .ghapama-step-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .step-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .step-orange { background-color: #a04a26; }
+  .step-green { background-color: #5c6340; }
+  .step-yellow { background-color: #8c6216; }
+
+  .step-text-block {
+    h3 { font-family: $font-title; font-size: 18px; margin-bottom: 6px; }
+    p { font-family: $font-body; font-size: 14px; line-height: 1.5; color: $color-dark; }
+  }
+  .step-inner-img {
+    margin-top: 12px;
+    img { width: 100%; border-radius: 12px; }
+  }
+}
+
+/* ==========================================================================
+   2.DESKTOP
+   ========================================================================== */
+@media (min-width: 768px) {
+  
+  
+  .ghapama-container {
+    max-width: 1140px; 
+    margin: 0 auto;   
+    padding: 60px 24px; 
+    gap: 54px;
+  }
+
+  
+  .ghapama-hero-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+
+    
+    .ghapama-main-title {
+      font-size: 54px;       
+      line-height: 1.1;
+      grid-column: 1;
+    }
+    
+    
+    .ghapama-main-description {
+      font-size: 22px;     
+      color: #000000 !important; 
+      line-height: 1.6;
+      
+      font-weight: 400;
+    }
+    .ghapama-meta-info {
+      grid-column: 1;
+      font-size: 15px;      
+    }
+    .ghapama-big-image {
+      grid-column: 2;
+      grid-row: 1 / span 3; 
+      img {
+        border-radius: 28px; 
+      }
+    }
+  }
+
+  
+  .ghapama-ingredients-row {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+
+    .ghapama-song-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+      h3 { font-size: 24px; }
+      .ghapama-play-btn {
+        width: auto; 
+      }
+    }
+
+    .ghapama-ingredients-box {
+      flex: 1.5;
+      padding: 36px;
+      .ghapama-list {
+        display: grid;
+        
+        
+        grid-template-columns: 1fr 1fr; 
+        gap: 12px 24px;
+        li { border-bottom: none; padding: 0; } 
+        
+      }
+    }
+  }
+
+ 
+  .ghapama-steps-section {
+    h2 { font-size: 32px; margin-bottom: 16px; }
+    
+    .ghapama-step-card {
+      gap: 20px;
+    }
+    .step-text-block {
+      h3 { font-size: 20px; }
+      p { font-size: 15px; }
+    }
+    .step-inner-img {
+      max-width: 550px; 
+    }
+  }
+}
