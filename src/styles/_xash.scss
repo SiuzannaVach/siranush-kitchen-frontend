@@ -1,0 +1,339 @@
+@use "variables" as *;
+
+/* ==========================================================================
+   mobile
+   ========================================================================== */
+
+.xash-page-wrapper {
+  width: 100%;
+}
+.xash-mobile-hero {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  
+  .xash-mobile-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .xash-mobile-title {
+  position: absolute; 
+  bottom: 16px;       
+  left: 20px;         
+  margin: 0;
+  
+  
+  font-family: $font-title; 
+  color: $color-white;      
+  font-size: 36px;          
+  font-weight: 900;
+  
+   color: #000000;
+    text-shadow: 
+      0 0 10px #ffffff,
+      0 0 5px #ffffff,
+      -1px -1px 0 #ffffff,
+       1px -1px 0 #ffffff,
+      -1px  1px 0 #ffffff,
+       1px  1px 0 #ffffff;
+    letter-spacing: -0.5px;
+}
+
+}
+.xash-container {
+  padding: 24px 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.xash-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 16px;
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 4px;
+    font-size: 13px;
+    font-family: $font-body;
+    color: $color-nav-text; 
+    font-weight: $weight-medium;
+  }
+  
+  .info-divider {
+    width: 1px;
+    height: 24px;
+    background-color: rgba($color-nav-text, 0.2);
+  }
+}
+
+.decorative-divider {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 32px;
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+    background-color: rgba($color-accent, 0.2); 
+  }
+  &::before { left: 0; }
+  &::after { right: 0; }
+}
+
+.section-title {
+  color: $color-primary; 
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  .ingredient-card {
+    background-color: $color-secondary; 
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid rgba($color-primary, 0.05);
+    
+    .ingredient-name {
+      font-family: $font-body;
+      font-weight: $weight-bold;
+      font-size: 16px;
+      color: $color-dark;
+      margin: 0 0 4px 0;
+    }
+    .ingredient-desc {
+      font-family: $font-body;
+      font-size: 14px;
+      color: $color-nav-text;
+      margin: 0;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   desktop
+   ========================================================================== */
+@media (min-width: $breakpoint-tablet) {
+  
+  .xash-hero-section {
+    width: 100%;
+    
+    .xash-big-image {
+      width: 100%;
+      height: 480px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .xash-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .xash-main-title {
+      position: absolute;
+      bottom: 50px;
+      left: 80px;
+      color: $color-white;
+      font-size: 56px;
+      margin: 0;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .xash-desktop-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    gap: 60px;
+  }
+
+  
+  .xash-desktop-sidebar {
+    flex: 1;
+    max-width: 320px;
+    
+    .xash-ingredients-box {
+      position: sticky;
+      top: 40px;
+    }
+    
+    .xash-history-title {
+      color: $color-primary;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .xash-main-description {
+      font-family: $font-body;
+      font-size: 15px;
+      color: $color-dark;
+      line-height: 1.7;
+      font-style: italic;
+    }
+  }
+
+ 
+  .xash-desktop-main {
+    flex: 2.5;
+    
+    .section-title {
+      font-size: 28px;
+    }
+  }
+
+  
+  .ingredients-grid-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 50px;
+    
+    .ingredient-card-desktop {
+      background: $color-secondary;
+      border: 1px solid rgba($color-primary, 0.08);
+      border-radius: 12px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      
+      .dot {
+        color: $color-accent; 
+        font-size: 24px;
+        line-height: 1;
+      }
+      .ingredient-name {
+        font-family: $font-body;
+        font-size: 16px;
+        font-weight: $weight-bold;
+        color: $color-dark;
+        
+        .ingredient-desc {
+          font-weight: $weight-regular;
+          color: $color-nav-text;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  
+  .xash-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    .xash-step-item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    
+    .xash-step-number {
+      background-color: $color-accent; 
+      color: $color-white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $font-body;
+      font-size: 18px;
+      font-weight: $weight-bold;
+      flex-shrink: 0;
+    }
+    
+    .xash-step-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .xash-step-title {
+      font-size: 18px;
+      color: $color-dark;
+      margin: 0;
+    }
+    
+    .xash-step-text {
+      font-family: $font-body;
+      font-size: 15px;
+      color: $color-dark;
+      line-height: 1.6;
+      margin: 0;
+      opacity: 0.9;
+    }
+    
+    .xash-step-image-wrapper {
+      padding-left: 68px;
+      width: 100%;
+      
+      .xash-prep-img {
+        width: 100%;
+        max-width: 680px;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba($color-dark, 0.05);
+      }
+    }
+  }
+}
+.sidebar-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  flex: 1;
+
+  span {
+    font-size: 20px;
+  }
+
+  .info-title {
+    font-family: $font-body;
+    font-size: 11px;
+    font-weight: $weight-bold;
+    color: $color-nav-text;
+    letter-spacing: 0.5px;
+  }
+
+  .info-item-line {
+    width: 24px;
+    height: 1px;
+    background-color: rgba($color-primary, 0.2);
+    margin: 6px 0;
+  }
+
+  .info-value {
+    font-family: $font-title;
+    font-size: 14px;
+    color: $color-accent;
+    font-weight: $weight-medium;
+    margin-top: 2px;
+  }
+}
+

@@ -20,6 +20,11 @@ export default function Header() {
       setIsMenuOpen(false);
       navigate("/recipes");
       setSearchQuery("");
+      } else if (query === "xash" || query === "hash" || query === "хаш") {
+       setIsMenuOpen(false);
+       navigate("/xash");
+       setSearchQuery("");
+
     }
   };
 
