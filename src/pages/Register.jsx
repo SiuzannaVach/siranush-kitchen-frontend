@@ -12,10 +12,10 @@ export default function Register() {
     password: "",
   });
 
-  // Состояние для определения десктопа (по умолчанию проверяем ширину при загрузке)
+  
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
-  // Слушаем изменение размера окна, чтобы переключать верстку "на лету"
+  
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
@@ -35,8 +35,8 @@ export default function Register() {
   };
 
   // =========================================================
-  // РЕНДЕР ДЛЯ ДЕСКТОПА (Оригинальная структура и классы)
-  // =========================================================
+  
+  // desktop=========================================================
   if (isDesktop) {
     return (
       <div className="register-page-desktop">
@@ -120,8 +120,8 @@ export default function Register() {
   }
 
   // =========================================================
-  // РЕНДЕР ДЛЯ МОБИЛКИ (Оригинальная структура и классы)
-  // =========================================================
+  
+  // mobile=========================================================
   return (
     <div className="register-page-mobile">
       <div className="register-visual">

@@ -14,7 +14,7 @@ export default function Footer() {
           <h2 className="footer-logo">Siranush's Kitchen</h2>
         </div>
 
-        {/* Короткая аккуратная линия из макета */}
+        
         <hr className="footer-divider" />
 
         <p className="footer-copy">

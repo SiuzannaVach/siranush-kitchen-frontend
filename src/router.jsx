@@ -7,6 +7,7 @@ import Admin from "./pages/Admin.jsx";
 import Register from "./pages/Register.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Ghapama from './pages/Ghapama';
+import Xash from "./pages/Xash.jsx";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
       { path: "register", element: <Register /> },
       { path: "dashboard", element: <Dashboard /> },
       { path: 'ghapama', element: <Ghapama /> },
+      { path: "xash", element: <Xash /> },
     ],
   },
 ]);
