@@ -1,9 +1,27 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; 
 import logo from "../assets/logo.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const navigate = useNavigate(); 
+
+  
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const query = searchQuery.trim().toLowerCase();
+
+    if (query === "ghapama" || query === "gapama" || query === "хапама" || query === "гапама") {
+      setIsMenuOpen(false);
+      navigate("/ghapama");
+      setSearchQuery("");
+    } else if (query === "recipes" || query === "recetas" || query === "рецепты") {
+      setIsMenuOpen(false);
+      navigate("/recipes");
+      setSearchQuery("");
+    }
+  };
 
   return (
     <header className="main-header">
@@ -13,7 +31,7 @@ export default function Header() {
           <span>Siranush's Kitchen</span>
         </NavLink>
 
-        {/* Кнопка Бургер (видна только на мобильных) */}
+       
         <button
           className={`burger-menu ${isMenuOpen ? "open" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -24,14 +42,21 @@ export default function Header() {
           <span></span>
         </button>
 
-        {/* Навигация и Поиск */}
+        
         <div className={`header-actions ${isMenuOpen ? "active" : ""}`}>
-          <div className="header-search">
-            <input type="text" placeholder="Buscar recetas..." />
+          
+          
+          <form onSubmit={handleSearch} className="header-search">
+            <input 
+              type="text" 
+              placeholder="Buscar recetas..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
             <button type="submit" className="search-btn" aria-label="Buscar">
               🔍
             </button>
-          </div>
+          </form>
 
           <nav className="header-nav">
             <NavLink
