@@ -55,6 +55,7 @@ siranush-kitchen-frontend/
 │   ├── pages/               # Vistas principales de la aplicación (Pantallas)
 │   │   ├── Admin.jsx        # Vista exclusiva del panel de administración
 │   │   ├── Dashboard.jsx    # Panel general de gestión
+│   │   ├── Ghapama.jsx      # Receta     
 │   │   ├── Home.jsx         # Página de inicio y landing page
 │   │   ├── Login.jsx        # Formulario de acceso para el Admin
 │   │   ├── Recipes.jsx      # Catálogo interactivo de recetas tradicionales
@@ -140,5 +141,5 @@ Actualmente, el proyecto se encuentra en **Fase Final de Despliegue y Producció
 
 Este es un proyecto individual desarrollado de forma integral (Full Stack):
 
-* **Desarrolladora:** Siuzanna (Siranush) — [@SiuzannaVach](https://github.com/SiuzannaVach)
+* **Desarrolladora:** Siuzanna Vachaganian — [@SiuzannaVach](https://github.com/SiuzannaVach)
 * **Formación:** Factoría F5 (Cohorte 9, Barcelona)
