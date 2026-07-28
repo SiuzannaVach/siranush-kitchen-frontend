@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import iconAll from '../assets/icon.svg'; 
 import iconSopas from '../assets/icon-sopas.svg';
 import iconCarnes from '../assets/icon-carnes.svg';
@@ -7,11 +7,6 @@ import iconReposteria from '../assets/icon-reposteria.svg';
 import iconFestividades from '../assets/icon-festividades.svg';
 import AddRecipeModal from '../components/AddRecipeModal/AddRecipeModal';
 import pomegranateBg from "../assets/pomegranate-pattern.jpg";
-
-
-
-
-
 import dishXash from '../assets/recipe-xash.jpg';
 import dishGata from '../assets/recipe-gata.jpg';
 import dishDolma from '../assets/recipe-dolma.jpg'; 
@@ -21,6 +16,7 @@ import iconEdit from '../assets/icon-edit.svg';
 import iconDelete from '../assets/icon-delete.svg';
 
 export default function Dashboard() {
+ const navigate = useNavigate();
  const [isModalOpen, setIsModalOpen] = useState(false);
 const [editingRecipe, setEditingRecipe] = useState(null);
   const [activeCategory, setActiveCategory] = useState('all');
@@ -73,9 +69,25 @@ const [editingRecipe, setEditingRecipe] = useState(null);
     }
   ]);
 
-   const handleViewRecipe = (title) => {
-    alert(`Visualizando la receta de: ${title}`);
+    const handleViewRecipe = (recipe) => {
+    if (recipe.id === 1) {
+      
+      navigate('/recipes'); 
+    } else if (recipe.id === 2) {
+      
+      navigate('/xash');
+    } else if (recipe.id === 3) {
+     
+      navigate('/recipes');
+    } else if (recipe.id === 4) {
+     
+      navigate('/ghapama');
+    } else {
+      
+      alert(`La página para "${recipe.title}" aún no está creada.`);
+    }
   };
+
 
   const handleEditRecipe = (recipe) => {
     setEditingRecipe(recipe); 
@@ -153,7 +165,7 @@ const [editingRecipe, setEditingRecipe] = useState(null);
    <div className="recipe-buttons-row">
        <button 
      className="btn-view-recipe" 
-    onClick={() => handleViewRecipe(recipe.title)}
+    onClick={() => handleViewRecipe(recipe)}
   >
     Ver Receta
    </button>
