@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, test, expect } from 'vitest';
-//TEST DE FORMULARIO 
+// Test unitario de interfaz: verifica la escritura del email y el renderizado del botón.
+
 describe('Formulario de Registro (Subscribe Form)', () => {
   const renderForm = () => {
     return render(
@@ -21,6 +22,7 @@ describe('Formulario de Registro (Subscribe Form)', () => {
       </div>
     );
   };
+//// Valida que el input permite escribir el email
 
   test('debe permitir al usuario escribir su email correctamente', async () => {
     renderForm();
@@ -31,7 +33,8 @@ describe('Formulario de Registro (Subscribe Form)', () => {
     await userEvent.type(emailInput, 'test@kitchen.com');
     expect(emailInput.value).toBe('test@kitchen.com');
   });
-
+// Verifica que el botón existe en pantalla
+ 
   test('debe renderizar el botón de Enviar', () => {
     renderForm();
     

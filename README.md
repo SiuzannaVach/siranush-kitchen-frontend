@@ -143,3 +143,5 @@ Este es un proyecto individual desarrollado de forma integral (Full Stack):
 
 * **Desarrolladora:** Siuzanna Vachaganian — [@SiuzannaVach](https://github.com/SiuzannaVach)
 * **Formación:** Factoría F5 (Cohorte 9, Barcelona)
+* **Repositorio del Backend:** [GitHub - Siranush Kitchen Backend](https://github.com/SiuzannaVach/siranush-kitchen-backend.git)
+* **Repositorio del Frontend:** [GitHub - Siranush Kitchen Frontend](https://github.com/SiuzannaVach/siranush-kitchen-frontend.git).
