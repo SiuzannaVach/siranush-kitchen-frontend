@@ -29,6 +29,14 @@ function HomeMobile() {
             Entra a mi cocina en Armenia, donde cada especia cuenta una historia
             y cada plato es un pedazo de nuestra herencia armenia.
           </p>
+          <div className="hero-actions-mobile" style={{ display: "flex", flexDirection: "column", gap: "12px", padding: "0 20px", marginBottom: "40px" }}>
+            <Link to="/recipes" className="btn-primary" style={{ textAlign: "center" }}>
+              Explorar Recetas
+            </Link>
+            <Link to="/login" className="btn-secondary" style={{ textAlign: "center" }}>
+              Iniciar Sesión
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -45,7 +53,7 @@ function HomeMobile() {
               la vid en el jardín . Cada envoltura es una oración silenciosa por
               la familia."
             </p>
-            <Link to="/recipes" className="card-link-mobile btn-dolma-mobile">
+            <Link to="/dolma" className="card-link-mobile btn-dolma-mobile">
               Ver Receta
             </Link>
           </div>
@@ -62,7 +70,7 @@ function HomeMobile() {
               "La corteza dorada esconde un corazón de mantequilla y azúcar. Era
               el centro de atención de cada mesa festiva en el pueblo."
             </p>
-            <Link to="/recipes" className="card-link-mobile btn-gata-mobile">
+            <Link to="/gata" className="card-link-mobile btn-gata-mobile">
               Ver Receta
             </Link>
           </div>
@@ -80,18 +88,18 @@ function HomeMobile() {
               reunimos antes del amanecer, triturando ajo y compartiendo pan
               mientras las mountains duermen."
             </p>
-            <Link to="/recipes" className="card-link-mobile">
+            <Link to="/xash" className="card-link-mobile btn-xash-mobile">
               Ver Receta
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Добавленный блок формы: Registrarse (как в Figma) */}
+      {/*  Registrarse  */}
       <div className="subscribe-section-mobile">
         <div className="subscribe-container-mobile">
           <div className="subscribe-box-mobile">
-            {/* Иконка книги */}
+            
             <div
               className="subscribe-icon-box"
               style={{ textAlign: "center", marginBottom: "16px" }}

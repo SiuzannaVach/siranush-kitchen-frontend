@@ -1,4 +1,14 @@
 @use "variables" as *;
+body {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    url('/src/assets/pomegranate-pattern.jpg');
+  background-color: #ffffff;
+  background-repeat: repeat;
+  background-size: 300px auto;
+  background-attachment: scroll;
+}
+
 
 .home-page-mobile {
   display: block !important;
@@ -215,7 +225,7 @@
   cursor: pointer;
 }
 
-// --- СЕКЦИЯ 4: REGISTRARSE ---
+// ---  REGISTRARSE ---
 .subscribe-section-mobile {
   background-color: #fdf6ee !important;
   padding: 48px 0 !important;
@@ -293,6 +303,15 @@
 // ==========================================
 // 2. VERSION DESKTOP
 // ==========================================
+body {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    url('/src/assets/pomegranate-pattern.jpg');
+  background-color: #ffffff;
+  background-repeat: repeat;
+  background-size: 300px auto;
+  background-attachment: scroll;
+}
 
 .hero-section {
   background-size: cover;
@@ -344,7 +363,7 @@
   gap: 12px;
 }
 
-// Кнопки
+
 .btn-primary {
   display: inline-block;
   text-align: center;
@@ -734,4 +753,12 @@
     margin: 0 auto;
     padding: 0 20px;
   }
+  .home-page, 
+.home-page-mobile, 
+.recipes-section, 
+.hero-container, 
+.hero-container-mobile {
+  background-color: transparent !important;
+}
+
 }
