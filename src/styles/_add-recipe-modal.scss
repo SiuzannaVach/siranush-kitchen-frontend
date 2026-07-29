@@ -1,8 +1,6 @@
 @use "variables" as *;
 
-/* ==========================================================================
-   MOBILE STYLES (Base Styles - Mobile First)
-   ========================================================================== */
+/* MOBILE STYLES (Base Styles - Mobile First)*/
 
 .modal-overlay {
   position: fixed;
@@ -285,6 +283,4 @@
       width: auto;
     }
   }
-
-  
 }

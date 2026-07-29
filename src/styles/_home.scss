@@ -300,9 +300,8 @@ body {
   }
 }
 
-// ==========================================
 // 2. VERSION DESKTOP
-// ==========================================
+
 body {
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
@@ -603,10 +602,8 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
-// ==========================================
 // 2. DESKTOP VERSION
-// ==========================================
+
 
 @media (min-width: $breakpoint-desktop) {
   .hero-section {

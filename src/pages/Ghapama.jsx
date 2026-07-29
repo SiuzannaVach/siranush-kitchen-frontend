@@ -23,7 +23,7 @@ const Ghapama = () => {
       <div className="ghapama-page-wrapper">
         <div className="ghapama-container">
           
-          {/* 1. Блок Hero (Мобильный) */}
+          
           <section className="ghapama-hero-section">
             <div className="ghapama-big-image">
               <img src={ghapamaPrep1} alt="Ghapama" />
@@ -31,7 +31,7 @@ const Ghapama = () => {
             <h1 className="ghapama-main-title">Ghapama: El Tesoro Dorado</h1>
           </section>
 
-          {/* 2. Карточка: La Historia */}
+         
           <div className="ghapama-ingredients-box">
             <h2>La Historia</h2>
             <p className="ghapama-main-description">
@@ -42,7 +42,7 @@ const Ghapama = () => {
             </p>
           </div>
 
-          {/* 3. Карточка: Preparar la Cuna */}
+          
            <div className="ghapama-ingredients-box">
             <div className="step-inner-img" style={{ marginTop: 0, marginBottom: '16px' }}>
               <img src={ghapamaPrep2} alt="Preparar la Cuna" />
@@ -54,7 +54,7 @@ const Ghapama = () => {
             </p>
           </div>
 
-          {/* 4. Карточка: Смесь и Ингредиенты */}
+        
           <div className="ghapama-ingredients-box">
             <div className="step-inner-img" style={{ marginTop: 0, marginBottom: '16px' }}>
               <img src={ghapamaPrep3} alt="La Mezcla de Oro" />
@@ -66,10 +66,7 @@ const Ghapama = () => {
               Cada bocado debe ser una joya.
             </p>
 
-
-
-
-            <h2>Ingredientes</h2>
+         <h2>Ingredientes</h2>
             <ul className="ghapama-list">
               <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <span className="ingredient-dot" style={{ width: '6px', height: '6px', backgroundColor: '#5C6340', borderRadius: '50%', flexShrink: 0 }}></span>

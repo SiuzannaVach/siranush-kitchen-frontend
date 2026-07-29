@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import dishXashMobile from '../assets/dish-xash-mobile.jpg';
-
-import xashHero from '../assets/xash-hero.jpg'; // ИСПРАВЛЕНО: было .jps
+import xashHero from '../assets/xash-hero.jpg'; 
 import xashPrep from '../assets/xash-prep.jpg';
 
 const Xash = () => {
@@ -31,9 +30,8 @@ const Xash = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // ==========================================
-  // mobile
-  // ==========================================
+ // mobile
+  
   if (isMobile) {
     return (
       <div className="xash-page-wrapper">
@@ -72,14 +70,12 @@ const Xash = () => {
         </div>
       </div>
     );
-  } // <-- ИСПРАВЛЕНО: Закрыли блок мобильного IF
+  } 
 
-  // ==========================================
-  // ДЕСКТОПНАЯ ВЕРСИЯ
-  // ==========================================
+  // desktop
+  
   return (
     <div className="xash-page-wrapper desktop">
-      {/* Блок hero */}
       <section className="xash-hero-section">
         <div className="xash-big-image">
           <img src={xashHero} alt="Xash" className="xash-hero-img" />
@@ -94,7 +90,7 @@ const Xash = () => {
   <div className="sidebar-info-item">
     <span>🕒</span>
     <span className="info-title">PREPARACIÓN</span>
-    {/* ЛИНИЯ-РАЗДЕЛИТЕЛЬ */}
+   
     <div className="info-item-line" />
     <strong className="info-value">24h</strong>
   </div>
@@ -102,7 +98,7 @@ const Xash = () => {
   <div className="sidebar-info-item">
     <span>🍴</span>
     <span className="info-title">PORCIONES</span>
-    {/* ЛИНИЯ-РАЗДЕЛИТЕЛЬ */}
+   
     <div className="info-item-line" />
     <strong className="info-value">6-8</strong>
   </div>
@@ -110,7 +106,7 @@ const Xash = () => {
   <div className="sidebar-info-item">
     <span>📋</span>
     <span className="info-title">DIFICULTAD</span>
-    {/* ЛИНИЯ-РАЗДЕЛИТЕЛЬ */}
+    
     <div className="info-item-line" />
     <strong className="info-value">Paciencia</strong>
   </div>
@@ -132,7 +128,7 @@ const Xash = () => {
           </div>
         </aside>
 
-        {/* ПРАВАЯ КОЛОНКА: Ингредиенты + Шаги */}
+        
         <main className="xash-desktop-main">
           <h2 className="section-title">Ingredientes</h2>
           
@@ -161,7 +157,7 @@ const Xash = () => {
               </div>
             </div>
 
-            {/* ШАГ 2 */}
+            
             <div className="xash-step-item">
               <div className="xash-step-number">2</div>
               <div className="xash-step-content">
@@ -174,12 +170,12 @@ const Xash = () => {
               </div>
             </div>
 
-            {/* КАРТИНКА ПРИГОТОВЛЕНИЯ */}
+           
             <div className="xash-step-image-wrapper">
               <img src={xashPrep} alt="Preparación de Xash" className="xash-prep-img" />
             </div>
 
-            {/* ШАГ 3 */}
+          
             <div className="xash-step-item">
               <div className="xash-step-number">3</div>
               <div className="xash-step-content">
@@ -192,7 +188,7 @@ const Xash = () => {
               </div>
             </div>
 
-            {/* ШАГ 4 */}
+          
             <div className="xash-step-item">
               <div className="xash-step-number">4</div>
               <div className="xash-step-content">

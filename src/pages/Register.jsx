@@ -12,10 +12,8 @@ export default function Register() {
     password: "",
   });
 
-  
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
-  
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1024);
@@ -34,9 +32,7 @@ export default function Register() {
     console.log("Datos de registro:", formData);
   };
 
-  // =========================================================
-  
-  // desktop=========================================================
+  // desktop
   if (isDesktop) {
     return (
       <div className="register-page-desktop">
@@ -119,9 +115,8 @@ export default function Register() {
     );
   }
 
-  // =========================================================
   
-  // mobile=========================================================
+   // mobile
   return (
     <div className="register-page-mobile">
       <div className="register-visual">

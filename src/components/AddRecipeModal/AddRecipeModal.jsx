@@ -6,7 +6,7 @@ import bgUploadDesktop from '../../assets/bg-upload-desktop.png';
 import iconUpload from '../../assets/icon.svg'; 
 
 export default function AddRecipeModal({ isOpen, onClose, onSave, categories,recipeToEdit }) {
-  // Локальные стейты формы для сбора данных
+  
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('reposteria'); 
   const [difficulty, setDifficulty] = useState('Herencia'); 

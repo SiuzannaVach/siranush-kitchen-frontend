@@ -5,7 +5,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* Чтобы внутренние отступы не взрывали ширину блоков */
+  box-sizing: border-box; 
   margin: 0;
   padding: 0;
 }
@@ -24,22 +24,22 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%; /* Защищает картинки от вылезания за пределы блоков */
+  max-width: 100%; 
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit; /* Чтобы кнопки и инпуты не сбрасывали шрифты сайта */
+  font: inherit; 
 }
 
 a {
   text-decoration: none;
-  color: inherit; /* Убирает стандартный синий цвет и подчеркивание у ссылок */
+  color: inherit; 
 }
 
 ul,
 ol {
-  list-style: none; /* Полностью убирает стандартные точки у списков */
+  list-style: none; 
 }

@@ -14,8 +14,6 @@ export const authService = {
     if (!response.ok) {
       throw new Error("Usuario o contraseña incorrectos");
     }
-
-    // El backend confirma la identidad; asumimos ADMIN si el login coincide con el admin configurado
     return {
       username,
       role: "ADMIN",

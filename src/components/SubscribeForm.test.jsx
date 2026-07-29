@@ -22,7 +22,7 @@ describe('Formulario de Registro (Subscribe Form)', () => {
       </div>
     );
   };
-//// Valida que el input permite escribir el email
+// Valida que el input permite escribir el email
 
   test('debe permitir al usuario escribir su email correctamente', async () => {
     renderForm();
