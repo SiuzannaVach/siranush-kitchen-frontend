@@ -37,7 +37,7 @@ El sistema define dos caminos de navegación claros según el tipo de acceso del
 
 ## 🏗️ Arquitectura del Frontend (Estructura de Archivos)
 
-El proyecto sigue una estructura limpia и escalable, separando los componentes de la interfaz de la suite de pruebas y aplicando estilos globales controlados:
+El proyecto sigue una estructura limpia y escalable, separando los componentes de la interfaz de la suite de pruebas y aplicando estilos globales controlados:
 
 ```text
 siranush-kitchen-frontend/
