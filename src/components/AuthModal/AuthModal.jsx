@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import authModalImage from "../../assets/authModalBg.jpg"; // Для мобильного фона (стол)
-import authDesktopImage from "../../assets/auth-modal.jpg"; // Для десктопной левой части (очаг)
+import authModalImage from "../../assets/authModalBg.jpg";
+import authDesktopImage from "../../assets/auth-modal.jpg"; 
 
 export default function AuthModal({
   onClose,
@@ -14,18 +14,18 @@ export default function AuthModal({
 
   return (
     <div className="auth-overlay">
-      {/* Мобильный фон */}
+     
       <div className="auth-mobile-bg">
         <img src={authModalImage} alt="Background Mobile" />
       </div>
 
       <div className="auth-modal">
-        {/* Левая половина для десктопа с правильной переменной */}
+      
         <div className="auth-modal__left">
           <img src={authDesktopImage} alt="El Legado de Siranush" />
         </div>
 
-        {/* Правая сторона с формой */}
+       
         <div className="auth-modal__right">
           <button className="auth-modal__close" onClick={onClose}>
             ×
